@@ -50,7 +50,7 @@ void* HeapManager::Allocate(const std::size_t size, const std::size_t alignment)
     Node* affectedNode,
         * previousNode;
     this->Find(size, alignment, padding, previousNode, affectedNode);
-    assert(affectedNode != nullptr && "Not enough memory");
+	assert(affectedNode != nullptr && "Not enough memory");
 
 
     const std::size_t alignmentPadding = padding - allocationHeaderSize;
@@ -284,11 +284,11 @@ bool HeapManager_UnitTest()
 
 #ifdef SUPPORTS_ALIGNMENT
 		// pick an alignment
-		const unsigned int	alignments[] = { 4, 8, 16, 32, 64 };
+		const uint16_t	alignments[] = { 4, 8, 16, 32, 64 };
 
-		const unsigned int	index = rand() % (sizeof(alignments) / sizeof(alignments[0]));
+		const uint16_t	index = rand() % (sizeof(alignments) / sizeof(alignments[0]));
 
-		const unsigned int	alignment = alignments[index];
+		const uint16_t	alignment = alignments[index];
 
 		void* pPtr = pHeapManager->Allocate(sizeAlloc, alignment);
 
