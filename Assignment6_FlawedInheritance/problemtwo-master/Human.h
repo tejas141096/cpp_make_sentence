@@ -24,8 +24,8 @@ public:
 	const char* getName() const { return m_Name; }
 
 	// return my specific type
-	virtual const char* getTypeName() const { return "Human"; }
+	virtual const char* getTypeName() const override { return "Human"; }
 private:
-	const char* m_Name;
+	const char const * m_Name;
 };
 

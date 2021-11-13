@@ -22,7 +22,7 @@ namespace Engine
 			// - set individual element
 			inline void x(float i_x);
 			inline void y(float i_y);
-			inline void z(float i_z);
+			//inline void z(float i_z); //z not there in vector2
 
 			// modifying operators
 			inline Vector2& operator+=(const Vector2& i_rhs);
